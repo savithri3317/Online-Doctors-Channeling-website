@@ -20,6 +20,31 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="address" value="{{ __('address') }}" />
+                <x-jet-input id="address" class="block mt-1 w-full" type="string" name="address" :value="old('address')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="phone_number" value="{{ __('phone_number') }}" />
+                <x-jet-input id="phone_number" class="block mt-1 w-full" type="string" name="phone_number" :value="old('phone_number')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="gender" value="{{ __('gender') }}" />
+                <x-jet-input id="gender" class="block mt-1 w-full" type="text" name="gender" :value="old('gender')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="date_of_birth" value="{{ __('date_of_birth') }}" />
+                <x-jet-input id="date_of_birth" class="block mt-1 w-full" type="date" name="date_of_birth" :value="old('date_of_birth')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="NIC" value="{{ __('NIC') }}" />
+                <x-jet-input id="NIC" class="block mt-1 w-full" type="string" name="NIC" required />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
