@@ -82,9 +82,14 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
+
             @if(Route::has('login'))
 
             @auth
+
+            <li class="nav-item">
+              <a class="nav-link" style="background-color:rgb(114, 226, 133); color:white;" href="{{url('myappointment')}}">My Appointment</a>
+            </li>
 
             <x-app-layout>
             </x-app-layout>
@@ -106,6 +111,18 @@
       </div> <!-- .container -->
     </nav>
   </header>
+
+  @if(session()->has('message'))
+
+  <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">
+      x
+      </button>
+        
+        {{session()->get('message')}}
+
+  </div>
+  @endif 
 
   <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
     <div class="hero-section">
