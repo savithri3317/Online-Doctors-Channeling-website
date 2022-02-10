@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Auth; 
+use Illuminate\Support\Facades\Auth; 
 use App\Models\User;
 use App\Models\Doctor;
 use App\Models\Appoinment;
@@ -13,7 +13,7 @@ class HomeController extends Controller
     {
         if(Auth::id())
         {
-            if(Auth::user()->usertype=='1'){
+            if(Auth::user()->usertype=='0'){
                 $doctor = doctor::all();
                 return view('user.home',compact('doctor'));
             }
@@ -77,9 +77,15 @@ class HomeController extends Controller
     {
         if(Auth::id())
         {
-            $userid=Auth::user()->id;
-            $appoint=appoinment::where('user_id',$userid)->get();
-            return view('user.my_appointment',compact('appoint'));
+            if(Auth::user()->usertype==0)
+            {
+
+                $userid=Auth::user()->id;
+                $appoint=appoinment::where('user_id',$userid)->get();
+                return view('user.my_appointment',compact('appoint'));
+            }
+
+           
         }
        else{
            return redirect()->back;

@@ -6,13 +6,38 @@ use Illuminate\Http\Request;
 
 use App\Models\Doctor;
 
+use Illuminate\Support\Facades\Auth;
+
 use App\Models\Appoinment;
+
+use Notification;
+
+use App\Notification\SendEmailNotification;
 
 class AdminController extends Controller
 {
     public function addview()
     {
-        return view('admin.add_doctor');
+        if(Auth::id())
+        
+        {
+            if(Auth::user()->usertype==1)
+            {
+                return view('admin.add_doctor');
+            }
+
+            else 
+                {
+                    return redirect()->back();
+                }
+
+               
+        }
+        else
+        {
+            return redirect('login');
+        }
+        
     }
 
     public function upload(request $request)
@@ -40,8 +65,23 @@ class AdminController extends Controller
 
     public function showappointment()
     {
-        $data=appoinment::all();
-        return view('admin.showappointment', compact('data'));
+        if(Auth::id())
+        
+        {
+            if(Auth::user()->usertype==1)
+            {
+
+                 $data=appoinment::all();
+                return view('admin.showappointment', compact('data'));
+            }
+
+            else{
+                return redirect()->back();
+            }
+        }
+        else{
+            return redirect('login');
+        }
     }
 
     public function approved($id)
@@ -121,5 +161,38 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Doctor Details Updated Successfully');
 
     } 
+
+    public function emailview($id)
+    {
+        $data=Appoinment::find($id);
+        return view('admin.email_view',compact('data'));
+    }
+
+    public function sendemail(Request $request,$id)
+    {
+        $data = Appoinment::find($id);
+
+        $details=[
+
+            'greeting' => $request->greeting,
+
+            'body' => $request->body,
+
+            'actiontext' => $request->actiontext,
+
+            'actionurl' => $request->actionurl,
+
+            'endpart' => $request->endpart
+
+
+
+        ];
+
+        Notification::send($data,new SendEmailNotification($details));
+        return redirect()->back();
+   
+    }
+
+
 
 }

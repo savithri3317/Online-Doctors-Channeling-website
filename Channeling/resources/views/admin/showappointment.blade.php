@@ -25,6 +25,7 @@
                     <th style="padding:10px">Status</th>
                     <th style="padding:10px">Approved</th>
                     <th style="padding:10px">Canceled</th>
+                    <th style="padding:10px">Send Mail</th>
                 </tr>
 
                 @foreach($data as $appoint)
@@ -41,6 +42,8 @@
                     <td><a class="btn btn-success" href="{{url('approved',$appoint->id)}}">Approved</td>
 
                     <td><a class="btn btn-danger" href="{{url('canceled',$appoint->id)}}">Canceled</td>
+
+                      <td><a class="btn btn-primary" href="{{url('emailview',$appoint->id)}}">Send Mail</td>
 
                 </tr>
 
