@@ -27,39 +27,39 @@
 
   <header>
     <div class="topbar">
-      <div class="container">
+      <!--<div class="container">
         <div class="row">
           <div class="col-sm-8 text-sm">
             <div class="site-info">
               <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
               <span class="divider">|</span>
               <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
-            </div>
+            </div>-->
           </div>
-          <div class="col-sm-4 text-right text-sm">
+          <!--<div class="col-sm-4 text-right text-sm">
             <div class="social-mini-button">
               <a href="#"><span class="mai-logo-facebook-f"></span></a>
               <a href="#"><span class="mai-logo-twitter"></span></a>
               <a href="#"><span class="mai-logo-dribbble"></span></a>
               <a href="#"><span class="mai-logo-instagram"></span></a>
             </div>
-          </div>
+          </div>-->
         </div> <!-- .row -->
       </div> <!-- .container -->
     </div> <!-- .topbar -->
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="{{url('/')}}"><span class="text-primary">One</span>-Health</a>
+        <a class="navbar-brand" href="{{url('/')}}"><h1><b><span class="text-primary">One</span>-Health</b></h1></a>
 
-        <form action="#">
+        <!--<form action="#">
           <div class="input-group input-navbar">
             <div class="input-group-prepend">
               <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
             </div>
             <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
           </div>
-        </form>
+        </form>-->
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -68,19 +68,21 @@
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{url('/')}}">Home</a>
+              
+              <a class="nav-link" href="{{url('/')}}"><b>Home</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="about.html"><b>About Us</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
+              <a class="nav-link" href="doctors.html"><b>Doctors</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
+              <a class="nav-link" href="blog.html"><b>News</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html"><b>Contact</b></a>
+            
             </li>
 
             @if(Route::has('login'))
@@ -88,7 +90,7 @@
             @auth
 
             <li class="nav-item">
-              <a class="nav-link" style="background-color:rgb(114, 226, 133); color:white;" href="{{url('myappointment')}}">My Appointment</a>
+              <a class="nav-link" style="background-color:rgb(114, 116, 226); color:white;" href="{{url('myappointment')}}">My Appointment</a>
             </li>
 
             <x-app-layout>
@@ -98,10 +100,10 @@
                 
             
             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="{{route('login')}}">Login </a>
+              <a class="btn btn-primary ml-lg-3" href="{{route('login')}}"><b>Login</b> </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-primary ml-lg-3" href="{{route('register')}}">Register </a>
+                <a class="btn btn-primary ml-lg-3" href="{{route('register')}}"><b>Register</b> </a>
               </li>
 
               @endauth
@@ -124,7 +126,7 @@
   </div>
   @endif 
 
-  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
+  <!--<div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
         <span class="subhead">Let's make your life happier</span>
@@ -165,14 +167,21 @@
           </div>
         </div>
       </div>
-    </div> <!-- .page-section -->
+    </div> --> <!-- .page-section -->
 
     <div class="page-section pb-0">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
-            <h1>Welcome to Your Health <br> Center</h1>
-            <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
+            <h1><b>Welcome to Your Health <br> Center</b></h1>
+            <p class="text-grey mb-4">
+              <ul>
+              <li>In any medical emergency, wherever in the Sri Lanka, we can give a helping hand, everyday of the year, including all Public Holidays.<br></li>
+              <li>All casualties are handled with complete understanding and compassion.<br></li>
+              <li>IMCS understand well the needs in case of an emergency provide a rapid and prompt response.<br></li>
+              <li>Our staffs are fluent in English. Also, if required could obtain assistance from translators for other languages (German, Russian, Ukraine, Finish, Danish, French, etc.)</li>
+              </ul>
+          </p>
             <a href="about.html" class="btn btn-primary">Learn More</a>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
@@ -214,20 +223,22 @@
             <li><a href="#">Join as Doctors</a></li>
           </ul>
         </div>
-        <div class="col-sm-6 col-lg-3 py-3">
+        <!--<div class="col-sm-6 col-lg-3 py-3">
           <h5>Our partner</h5>
           <ul class="footer-menu">
             <li><a href="#">One-Fitness</a></li>
             <li><a href="#">One-Drugs</a></li>
             <li><a href="#">One-Live</a></li>
           </ul>
-        </div>
+        </div>-->
         <div class="col-sm-6 col-lg-3 py-3">
           <h5>Contact</h5>
-          <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
-          <a href="#" class="footer-link">701-573-7582</a>
-          <a href="#" class="footer-link">healthcare@temporary.net</a>
+          <p class="footer-link mt-2">23/4,Rajapihilla Road,Kurunegala.</p>
+          <a href="#" class="footer-link">037-3456789</a>
+          <a href="#" class="footer-link">onehealth@gmail.com</a>
+        </div>
 
+        <div>
           <h5 class="mt-3">Social Media</h5>
           <div class="footer-sosmed mt-3">
             <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
@@ -241,7 +252,7 @@
 
       <hr>
 
-      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
+      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank"></a>. All right reserved</p>
     </div>
   </footer>
 

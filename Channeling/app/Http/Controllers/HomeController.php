@@ -85,9 +85,10 @@ class HomeController extends Controller
                 return view('user.my_appointment',compact('appoint'));
             }
 
-           
         }
-       else{
+
+       else
+       {
            return redirect()->back;
        } 
        

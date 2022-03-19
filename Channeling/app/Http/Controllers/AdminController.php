@@ -12,7 +12,7 @@ use App\Models\Appoinment;
 
 use Notification;
 
-use App\Notification\SendEmailNotification;
+use App\Notifications\SendEmailNotification;
 
 class AdminController extends Controller
 {
