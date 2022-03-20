@@ -19,7 +19,12 @@ class HomeController extends Controller
             }
             else
             {
-                return view('admin.home');
+                $doctors = doctor::all();
+                $doctors_count=$doctors->count();
+                $user=user::all();
+                $users_count=$user->count();
+                // dd($doctors_count);
+                return view('admin.home',compact('doctors_count','users_count'));
             }
 
         }

@@ -16,6 +16,13 @@ use App\Notifications\SendEmailNotification;
 
 class AdminController extends Controller
 {
+    public function index(){
+        $doctors=doctor::all();
+        // dd($doctors);
+        $doctors_count=$doctors->name;
+        return view('dashboard',$doctors);
+    }
+
     public function addview()
     {
         if(Auth::id())

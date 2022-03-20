@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-  <title>One Health - Medical Center HTML5 Template</title>
+  <title>One Health </title>
 
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -20,7 +20,7 @@
 
   <link rel="stylesheet" href="../assets/css/theme.css">
 </head>
-<body>
+<body class="bg-dark text-light">
 
   <!-- Back to top button -->
   <div class="back-to-top"></div>
@@ -48,7 +48,7 @@
       </div> <!-- .container -->
     </div> <!-- .topbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light">
       <div class="container">
         <a class="navbar-brand" href="{{url('/')}}"><h1><b><span class="text-primary">One</span>-Health</b></h1></a>
 
@@ -199,8 +199,18 @@
   @include('user.latest')
 
   @include('user.appointment')
-
-  
+  <div class="page-section pb-0 mb-5">
+    <div class="container">
+  <div class="mapouter row align-items-center wow fadeInUp">
+    <div class="gmap_canvas mx-5">
+      <iframe width="990" height="378" class="mx-5" id="gmap_canvas" src="https://maps.google.com/maps?q=rajapihilla%20road%20,%20kurunegala.&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      <a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:378px;width:990px;}</style>
+      <a href="https://www.embedgooglemap.net">google maps embed zoom</a>
+      <style>.gmap_canvas {overflow:hidden;background:none!important;height:378px;width:990px;}</style>
+    </div>
+  </div>
+</div>
+</div>  
 
   <footer class="page-footer">
     <div class="container">
