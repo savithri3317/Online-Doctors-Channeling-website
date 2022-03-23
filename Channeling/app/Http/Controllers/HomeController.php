@@ -34,6 +34,13 @@ class HomeController extends Controller
         }
     }
 
+    public function chart(){
+        $doctors = doctor::all();
+                $doctors_count=$doctors->count();
+                $user=user::all();
+                $users_count=$user->count();
+                return response()->json(array('doctors_count'=> $doctors_count,'users_count'=>$users_count), 200);
+    }
 
     public function index()
     {

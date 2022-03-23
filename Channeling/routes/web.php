@@ -20,6 +20,7 @@ use App\Http\controllers\AdminController;
 Route::get('/',[HomeController::class,'index']);
 
 Route::get('/home',[HomeController::class,'redirect'])->middleware('auth','verified');
+Route::get('/home/chart',[HomeController::class,'chart'])->middleware('auth','verified');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[AdminController::class,'index'])->name('dashboard');
 
