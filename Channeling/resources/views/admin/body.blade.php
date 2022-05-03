@@ -149,7 +149,7 @@
                       </div>
                       <div class="preview-item-content d-sm-flex flex-grow">
                         <div class="flex-grow">
-                          <h6 class="preview-subject">Broadcast Mail</h6>
+                          <h6 class="preview-subject">New message</h6>
                           <p class="text-muted mb-0">Sent release details to team</p>
                         </div>
                         <div class="mr-auto text-sm-right pt-2 pt-sm-0">
@@ -166,7 +166,7 @@
                       </div>
                       <div class="preview-item-content d-sm-flex flex-grow">
                         <div class="flex-grow">
-                          <h6 class="preview-subject">Broadcast Mail</h6>
+                          <h6 class="preview-subject">New Doctor request</h6>
                           <p class="text-muted mb-0">Sent release details to team</p>
                         </div>
                         <div class="mr-auto text-sm-right pt-2 pt-sm-0">
@@ -183,7 +183,7 @@
                       </div>
                       <div class="preview-item-content d-sm-flex flex-grow">
                         <div class="flex-grow">
-                          <h6 class="preview-subject">Broadcast Mail</h6>
+                          <h6 class="preview-subject">patient request</h6>
                           <p class="text-muted mb-0">Sent release details to team</p>
                         </div>
                         <div class="mr-auto text-sm-right pt-2 pt-sm-0">
@@ -200,7 +200,7 @@
                       </div>
                       <div class="preview-item-content d-sm-flex flex-grow">
                         <div class="flex-grow">
-                          <h6 class="preview-subject">Broadcast Mail</h6>
+                          <h6 class="preview-subject">Website update</h6>
                           <p class="text-muted mb-0">Sent release details to team</p>
                         </div>
                         <div class="mr-auto text-sm-right pt-2 pt-sm-0">
@@ -217,8 +217,8 @@
                       </div>
                       <div class="preview-item-content d-sm-flex flex-grow">
                         <div class="flex-grow">
-                          <h6 class="preview-subject">UI Design</h6>
-                          <p class="text-muted mb-0">New application planning</p>
+                          <h6 class="preview-subject">UI Arangement</h6>
+                          <p class="text-muted mb-0">Sent release details to team</p>
                         </div>
                         <div class="mr-auto text-sm-right pt-2 pt-sm-0">
                           <p class="text-muted">50 minutes ago</p>
